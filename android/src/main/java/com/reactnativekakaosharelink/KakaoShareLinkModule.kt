@@ -1,6 +1,7 @@
 package com.reactnativekakaosharelink
 
 import android.content.ActivityNotFoundException
+import android.content.Intent
 import com.facebook.react.bridge.*
 import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.util.KakaoCustomTabsClient
