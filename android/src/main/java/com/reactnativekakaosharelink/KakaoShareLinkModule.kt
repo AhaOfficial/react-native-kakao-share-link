@@ -111,7 +111,6 @@ class KakaoShareLinkModule(private val reactContext: ReactApplicationContext) : 
           val map = Arguments.createMap()
           map.putBoolean("result", true)
           map.putString("intent", linkResult?.intent.toString())
-          intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
           linkResult?.intent?.let { intent -> 
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             reactContext.startActivity(intent, null) }
