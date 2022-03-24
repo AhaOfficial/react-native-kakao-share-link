@@ -134,8 +134,9 @@ repositories {
 }
 
 dependencies {
+  
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation "com.kakao.sdk:v2-link:2.5.2"
+  implementation "com.kakao.sdk:v2-link:2.5.0"
 }
