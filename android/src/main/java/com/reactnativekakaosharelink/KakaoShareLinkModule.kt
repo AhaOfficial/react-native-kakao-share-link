@@ -111,6 +111,7 @@ class KakaoShareLinkModule(private val reactContext: ReactApplicationContext) : 
           val map = Arguments.createMap()
           map.putBoolean("result", true)
           map.putString("intent", linkResult?.intent.toString())
+          intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
           linkResult?.intent?.let { intent -> reactContext.startActivity(intent, null) }
           map.putString("warning", linkResult?.warningMsg.toString())
           map.putString("argument", linkResult?.argumentMsg.toString())
@@ -216,6 +217,7 @@ class KakaoShareLinkModule(private val reactContext: ReactApplicationContext) : 
           val map = Arguments.createMap()
           map.putBoolean("result", true)
           map.putString("intent", linkResult?.intent.toString())
+          intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
           linkResult?.intent?.let { intent -> reactContext.startActivity(intent, null) }
           map.putString("warning", linkResult?.warningMsg.toString())
           map.putString("argument", linkResult?.argumentMsg.toString())
